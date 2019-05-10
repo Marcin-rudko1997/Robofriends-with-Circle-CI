@@ -1,0 +1,10 @@
+.SearchBox {
+    background-color: #d2d6db;
+    border: none;
+
+
+}
+
+.SearchBox:focus {
+    outline: none;
+}

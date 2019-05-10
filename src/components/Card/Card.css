@@ -1,0 +1,19 @@
+.card {
+    position: relative;
+    background-color: #d2d6db;
+}
+
+.card__delete {
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    transition: all .3s;
+}
+
+.card__delete:hover {
+    color: #5B86E5;
+    cursor: pointer;
+}
