@@ -39,7 +39,7 @@ export const setSearchField = (state=initialStateSearch, action={}) => {
 export const requestRobots = (state=initialStateRobots, action={}) => {
     switch(action.type) {   
         case DELETE_ROBOT: return removeRobot(state, action);
-        case REQUEST_ROBOTS_PENDING: return {...state, isPending: false}
+        case REQUEST_ROBOTS_PENDING: return {...state, isPending: true}
         case REQUEST_ROBOTS_SUCCESS: return {...state, robots: action.payload, isPending: false}
         case REQUEST_ROBOTS_FAILED:  return {...state, error: action.payload, isPending: false}
         default: return state;

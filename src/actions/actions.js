@@ -20,7 +20,7 @@ export const deleteRobot = (robotID) => {
 }
 
 export const fetchRobots = () => dispatch => {
-    dispatch({type: REQUEST_ROBOTS_PENDING});
+    dispatch({type: REQUEST_ROBOTS_PENDING, payload: {isPending: true}});
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data => dispatch({type: REQUEST_ROBOTS_SUCCESS, payload: data}))
