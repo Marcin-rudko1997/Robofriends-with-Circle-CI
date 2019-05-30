@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  bobby:
+    docker:
+      - image: "circleci/node:9.6.1"
+    steps:
+      - checkout
+      - run: echo "Hello World"
+  sally:
+    docker:
+      - image: "circleci/node:9.6.1"
+    steps:
+      - checkout
+      - run: echo "Hello World"
+  workflows:
+    version: 2.1
+    bobby_sally:
+      jobs:
+        - bobby
+        - sally
